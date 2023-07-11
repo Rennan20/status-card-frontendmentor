@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`. */
+
+:root {
+  /* Primary Colors */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradient Colors */
+  --color-light-slate-blue: hsl(252, 100%, 67%);
+  --color-light-royal-blue: hsl(241, 81%, 54%);
+
+  /* Neutral Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Font Size */
+  --font-size-paragraphs: 18px;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  flex-direction: row;
+  display: flex;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-light-slate-blue),
+    var(--color-light-royal-blue)
+  );
+  padding: 1rem 2rem 1rem 2rem;
+  gap: 2rem;
+  width: fit-content;
+}
+
+.result h1 {
+  font-size: var(--font-size-paragraphs);
+  color: var(--color-light-lavender);
+}
+
+.h1-container {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-light-royal-blue),
+    transparent
+  );
+  padding: 2rem 3rem;
+  border-radius: 100%;
+}
+
+.circle p:first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.circle p:last-child {
+  font-size: 1rem;
+  color: var(--color-light-lavender);
+}
+
+.result h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.result p {
+  color: var(--color-light-lavender);
+}
+.p-container {
+  display: flex;
+  text-align: center;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 2rem 2rem 0;
+  background-color: var(--color-white);
+  gap: 2rem;
+  width: 50%;
+}
+
+.parameters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: auto;
+  max-width: fit-content;
+}
+
+.parameters p span.reaction {
+  color: var(--color-light-red);
+  margin-right: 2rem;
+}
+
+.parameters p span.memory {
+  color: var(--color-orangey-yellow);
+  margin-right: 2rem;
+}
+
+.parameters p span.verbal {
+  color: var(--color-green-teal);
+  margin-right: 2rem;
+}
+
+.parameters p span.visual {
+  color: var(--color-cobalt-blue);
+  margin-right: 2rem;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.container-red {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.1
+  ); /* Altere os valores conforme necessário */
+  border-radius: 0.325rem;
+  padding: 0.625rem 1rem;
+  width: 100%;
+}
+
+.container-orange {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(
+    255,
+    123,
+    0,
+    0.1
+  ); /* Altere os valores conforme necessário */
+  border-radius: 0.325rem;
+  padding: 0.625rem 1rem;
+  width: 100%;
+}
+
+.container-green {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    0,
+    255,
+    0,
+    0.1
+  ); /* Altere os valores conforme necessário */
+  border-radius: 0.325rem;
+  padding: 0.625rem 1rem;
+  width: 100%;
+}
+
+.container-blue {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    0,
+    0,
+    255,
+    0.1
+  ); /* Altere os valores conforme necessário */
+  border-radius: 0.325rem;
+  padding: 0.625rem 2rem;
+  width: 100%;
+}
+
+.total {
+  color: var(--color-light-lavender);
+  font-weight: 800;
+}
+
+.continue {
+  padding: 0.75rem 5rem;
+  background-color: var(--color-dark-gray-blue);
+  border-radius: 2rem;
+  border: none;
+  color: var(--color-white);
+  font-weight: 700;
+  width: fit-content;
+}
+
+svg {
+  margin-right: 10px;
+  margin-left: 0;
+}
